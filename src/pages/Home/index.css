@@ -1,0 +1,160 @@
+main {
+  flex-direction: column;
+}
+
+.generator {
+  width: 280px;
+  height: 280px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.generator div.box {
+  width: 85%;
+  height: 85%;
+  background: #ff0099;
+  background-image: linear-gradient(45deg, #3023ae 0%, #ff0099 100%);
+}
+
+.slider-container {
+  width: 280px;
+  height: 0;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input::-webkit-slider-runnable-track,
+input::-webkit-slider-thumb,
+input {
+  width: inherit;
+  height: 0;
+  -webkit-appearance: none;
+}
+input::-webkit-slider-runnable-track {
+  width: inherit;
+  height: 0;
+  background: transparent;
+}
+input::-moz-range-track {
+  width: inherit;
+  height: 0;
+  background: transparent;
+}
+input::-ms-track {
+  background: transparent;
+}
+input::-webkit-slider-thumb {
+  width: 25px;
+  height: 25px;
+  border: solid 3px purple;
+  border-radius: 50%;
+  background: #e6cce6;
+  pointer-events: auto;
+  cursor: move;
+}
+input::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border: solid 3px purple;
+  border-radius: 50%;
+  background: #e6cce6;
+  pointer-events: auto;
+  cursor: move;
+}
+input::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  border: solid 3px purple;
+  border-radius: 50%;
+  background: #e6cce6;
+  pointer-events: auto;
+  cursor: move;
+}
+input::-ms-fill-lower,
+input::-ms-fill-upper {
+  background: transparent;
+}
+input::-ms-tooltip {
+  display: none;
+}
+input:focus {
+  outline: solid 0px transparent;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.copy button {
+  width: 280px;
+  font-size: 12px;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  border: 0.5px solid #ccc;
+}
+
+.copy button span {
+  padding: 0 5px;
+}
+
+.copy button .icon {
+  color: transparent;
+}
+
+.copy button:hover {
+  box-shadow: 0.1px 0 5px 0.1px #ddd;
+}
+
+.copy button:hover .icon {
+  color: #fff;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

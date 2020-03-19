@@ -1,0 +1,12 @@
+header {
+  flex-direction: column;
+}
+
+header h1 {
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+header p {
+  margin-bottom: 5px;
+}

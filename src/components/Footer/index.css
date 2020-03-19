@@ -1,0 +1,17 @@
+footer {
+  text-align: center;
+}
+
+footer p {
+  padding: 0.5px 10px;
+  border-right: 1px solid #ccc;
+}
+
+footer p:last-child {
+  border-right: none;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
